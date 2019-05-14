@@ -1,0 +1,31 @@
+{
+  "name": "munchthai",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aOpenbrier/munchthai.git"
+  },
+  "author": "Adam Openbrier",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aOpenbrier/munchthai/issues"
+  },
+  "homepage": "https://github.com/aOpenbrier/munchthai#readme",
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "gh-pages": "^2.0.1",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2",
+    "cheerio": "^1.0.0-rc.3"
+  }
+}
