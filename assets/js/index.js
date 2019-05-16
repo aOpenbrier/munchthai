@@ -85,8 +85,9 @@ function arrowRight() {
     setTimeout(updateArrows, 500)
 }
 
-let menu = {}
+let menu 
 fetch('./assets/js/menu.json')
+.then(r => r.json())
 .then(r => {
     menu = r
 })
