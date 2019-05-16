@@ -1,0 +1,1 @@
+"use strict";function openMenu(){document.getElementById("nav-collapse").classList.toggle("open")}window.onclick=function(e){e.target.matches("#navtrigger")||document.getElementById("nav-collapse").classList.remove("open")};
