@@ -129,7 +129,7 @@ ${item.options ? `<p class="itemoptions">${item.options}</p>` : ''}
 
                 if (section["section list"]) {
                     let sectionList = document.createElement('div')
-                    sectionBody.className = 'sectionlist'
+                    sectionList.className = 'sectionlist'
                     sectionList.innerHTML = section["section list"]
                     sectionDiv.appendChild(sectionList)
                 }
