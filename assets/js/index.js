@@ -85,34 +85,30 @@ function arrowRight() {
     setTimeout(updateArrows, 500)
 }
 
-let menu 
 fetch('./assets/js/menu.json')
 .then(r => {
     console.log(r)
     return r.json()
 })
 .then(r => {
-    menu = r
-})
-.catch(e => console.log(e))
-
-// Add menu content
-menu.forEach(tab => {
-    tab.sections.forEach((section, sectionIndex) => {
-        let sectionDiv = document.createElement('div')
-        sectionDiv.className = 'menusection'
-        sectionDiv.innerHTML = `
+    const menu = r
+    // Add menu content
+    menu.forEach(tab => {
+        tab.sections.forEach((section, sectionIndex) => {
+            let sectionDiv = document.createElement('div')
+            sectionDiv.className = 'menusection'
+            sectionDiv.innerHTML = `
         <h3 class="sectiontitle">${section["section title"]}</h3>
         ${section["section details"] ? `<p class="sectiondetails">${section["section details"]}</p>` : ''}
         `
-        let sectionBody = document.createElement('div')
-        sectionBody.className = 'sectionbody'
+            let sectionBody = document.createElement('div')
+            sectionBody.className = 'sectionbody'
 
-        section["section items"].forEach((item, itemIndex) => {
-            let sectionItem = document.createElement('div')
-            sectionItem.className = 'sectionitem'
-            let price = item.price ? item.price.toString().split('.')[1] ? item.price.toFixed(2) : item.price : ''
-            sectionItem.innerHTML = `
+            section["section items"].forEach((item, itemIndex) => {
+                let sectionItem = document.createElement('div')
+                sectionItem.className = 'sectionitem'
+                let price = item.price ? item.price.toString().split('.')[1] ? item.price.toFixed(2) : item.price : ''
+                sectionItem.innerHTML = `
 ${item.price ? `<p class="itemprice">${`${price}`}</p>` : ''}
 ${item.name ? `<h5 class="itemname">${item.name}</h5>` : ''}
 ${item.description ? `<p class="itemdesc">${item.description}</p>` : ''}
@@ -130,18 +126,22 @@ ${item.list ? `<p class="itemlist">${item.list}</p>` : ''}
     ${item.featured ? `<p class="itemfeatured">FEATURED</p>` : ''}
 </div>
 `
-            sectionBody.appendChild(sectionItem)
+                sectionBody.appendChild(sectionItem)
+            })
+            sectionDiv.appendChild(sectionBody)
+            document.getElementById(tab.id).appendChild(sectionDiv)
         })
-        sectionDiv.appendChild(sectionBody)
-        document.getElementById(tab.id).appendChild(sectionDiv)
+        if (tab.disclaimer) {
+            let disclaimer = document.createElement('div')
+            disclaimer.className = 'menusection menudisclaimer'
+            disclaimer.innerHTML = tab.disclaimer
+            document.getElementById(tab.id).appendChild(disclaimer)
+        }
     })
-    if (tab.disclaimer) {
-        let disclaimer = document.createElement('div')
-        disclaimer.className = 'menusection menudisclaimer'
-        disclaimer.innerHTML = tab.disclaimer
-        document.getElementById(tab.id).appendChild(disclaimer)
-    }
 })
+.catch(e => console.log(e))
+
+
 
 // update arrow indicators after tab interaction is complete
 document.getElementById('menutabs').addEventListener('touchstart', menuScrolled)
