@@ -87,7 +87,10 @@ function arrowRight() {
 
 let menu 
 fetch('./assets/js/menu.json')
-.then(r => r.json())
+.then(r => {
+    console.log(r)
+    return r.json()
+})
 .then(r => {
     menu = r
 })
