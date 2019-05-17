@@ -668,9 +668,7 @@
             },
             {
                 "section title": "Utensils",
-                "section items": [{
-                    "list": "Serving Spoon | 0.75<br>10-Pack Paper Plates | 0.75<br>10-Pack Plates / Utensils / Serving Spoon | 2"
-                }]
+                "section list": "Serving Spoon | 0.75<br>10-Pack Paper Plates | 0.75<br>10-Pack Plates / Utensils / Serving Spoon | 2"
             }
         ]
     },
@@ -866,15 +864,11 @@
             },
             {
                 "section title": "Sodas",
-                "section items": [{
-                    "list": "Coke | 1.75 <br>Diet Coke | 1.75<br>Dr.Pepper | 1.75<br>Sprite | 1.75<br>Fanta Grape | 1.75<br>Fanta Pineapple | 1.75<br>Fanta Strawberry | 1.75<br>Mexican Coke | 2.75<br>Mexican Fanta(Orange) | 2.75"
-                }]
+                "section list": "Coke | 1.75 <br>Diet Coke | 1.75<br>Dr.Pepper | 1.75<br>Sprite | 1.75<br>Fanta Grape | 1.75<br>Fanta Pineapple | 1.75<br>Fanta Strawberry | 1.75<br>Mexican Coke | 2.75<br>Mexican Fanta(Orange) | 2.75"
             },
             {
                 "section title": "Juice & More",
-                "section items": [{
-                    "list": "Regular Iced Tea | 2.75<br>Perrier | 3.00<br>Bottled Water | 1.50<br>Orange Juice | 3.75<br>Apple Juice | 3.75<br>Young Coconut Juice | 3.75"
-                }]
+                "section list": "Regular Iced Tea | 2.75<br>Perrier | 3.00<br>Bottled Water | 1.50<br>Orange Juice | 3.75<br>Apple Juice | 3.75<br>Young Coconut Juice | 3.75"
             }
         ]
     }
