@@ -86,12 +86,9 @@ function arrowRight() {
 }
 
 fetch('./assets/js/menu.json')
-.then(r => {
-    console.log(r)
-    return r.json()
+.then(r => r.json()
 })
-.then(r => {
-    const menu = r
+.then(menu => {
     // Add menu content
     menu.forEach(tab => {
         tab.sections.forEach((section, sectionIndex) => {
@@ -101,6 +98,7 @@ fetch('./assets/js/menu.json')
         <h3 class="sectiontitle">${section["section title"]}</h3>
         ${section["section details"] ? `<p class="sectiondetails">${section["section details"]}</p>` : ''}
         `
+        if (section["section items"]) {
             let sectionBody = document.createElement('div')
             sectionBody.className = 'sectionbody'
 
@@ -117,7 +115,6 @@ ${item.vegan ? `<p class="itemdietary">*Vegan</p>` : ''}
 ${item.vegetarian ? `<p class="itemdietary">*Vegetarian</p>` : ''}
 ${item.extras ? `<p class="itemextras">${item.extras}</p>` : ''}
 ${item.options ? `<p class="itemoptions">${item.options}</p>` : ''}
-${item.list ? `<p class="itemlist">${item.list}</p>` : ''}
 <div class="itemimgwrapper">
     ${item.image ? `
     <div class="itemimage" style="background-image:url(./assets/images/${item.image})">
@@ -129,12 +126,20 @@ ${item.list ? `<p class="itemlist">${item.list}</p>` : ''}
                 sectionBody.appendChild(sectionItem)
             })
             sectionDiv.appendChild(sectionBody)
+        }
+
+            if (section["section list"]) {
+                let sectionList = document.createElement('div')
+                sectionBody.className = 'sectionlist'
+                sectionList.innerHTML = section["section list"]
+                sectionDiv.appendChild(sectionList)
+            }
             document.getElementById(tab.id).appendChild(sectionDiv)
         })
         if (tab.disclaimer) {
             let disclaimer = document.createElement('div')
-            disclaimer.className = 'menusection menudisclaimer'
-            disclaimer.innerHTML = tab.disclaimer
+            disclaimer.className = 'menusection'
+            disclaimer.innerHTML = `<div class="menudisclaimer">${tab.disclaimer}</div>`
             document.getElementById(tab.id).appendChild(disclaimer)
         }
     })
