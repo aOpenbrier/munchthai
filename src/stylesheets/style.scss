@@ -34,13 +34,6 @@ nav {
         letter-spacing: 2px;
     }
 
-    .order a {
-        border: 2px solid white;
-        padding: 5px 15px;
-        background: $primary;
-        border-radius: 15px;
-    }
-
     .hamburger {
         display: none;
     }
@@ -55,6 +48,13 @@ nav {
     li {
         white-space: nowrap;
     }
+}
+
+.order a {
+    border: 2px solid white;
+    padding: 5px 15px;
+    background: $primary;
+    border-radius: 15px;
 }
 
 @media only screen and (max-width: 900px) {
@@ -133,6 +133,21 @@ main {
         margin-bottom: .5em;
         line-height: 1.3em;
     }
+}
+
+.hours {
+        a {
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border: 2px solid white;
+            padding: 5px 15px;
+            background: $primary;
+            border-radius: 15px;
+        }
 }
 
 .menucontainer {
@@ -428,7 +443,7 @@ iframe {
     height: 450px;
 }
 
-#contact {
+#contact, .hours {
     padding: 3em 0 1em 0;
     display: flex;
     flex-wrap: wrap;
