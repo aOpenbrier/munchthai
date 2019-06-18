@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Munch Thai Food & Sweet Tea</title>
+    <meta name="description" content="Munch Thai Food &amp; Sweet Tea in Anaheim, CA. Call us at (714) 956-2830 Check out our location and hours, and latest menu with photos and reviews.">
+    <meta property="og:title" content="Munch Thai">
+    <meta property="og:description" content="Munch Thai Food &amp; Sweet Tea in Anaheim, CA. Call us at (714) 956-2830 Check out our location and hours, and latest menu with photos and reviews.">
+    <meta property="og:image" content="https://www.munchthai.com/assets/images/header.jpg">
+    <meta property="og:url" content="https://www.munchthai.com/">
+    <link rel="canonical" href="https://www.munchthai.com/">
+    <meta name="apple-mobile-web-app-title" content="Munch Thai Food & Sweet Tea">
+    <link rel="apple-touch-icon" href="https://www.munchthai.com/assets/images/favicon.png">
+    <link rel="apple-touch-icon" sizes="128x128" href="https://www.munchthai.com/assets/images/favicon.png">
+    <link rel="icon" sizes="192x192" type="image/png" href="https://www.munchthai.com/assets/images/favicon.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="https://www.munchthai.com/assets/images/favicon.png">
+    <meta name="theme-color" content="#c4001b">
+    <link rel="shortcut icon" href="./assets/images/favicon.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:700" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul id='nav-collapse'>
+                <li class='order'>
+                    <a href="https://www.toasttab.com/munch-thai/v2/online-order#!/" target="_blank">Order<span class='hidemobile'> Online</span></a>
+                </li>
+                <li><a href="#top">Home</a></li>
+                <li><a href="#ourmenu">Our Menu</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li class="hamburger">
+                    <i id='navtrigger' class="material-icons" onclick="openMenu()">
+                        menu
+                    </i>
+                </li>
+            </ul>
+        </nav>
+        <div id="top"></div>
+        <img src="./assets/images/header.jpg" alt="Munch Thai Food & Sweet Tea">
+    </header>
+    <main>
+        <div class="hours">
+            <div>
+                <h2>TAKEOUT & DINE-IN HOURS</h2>
+                <p>Monday - Friday 11:30 am - 10:30 pm</p>
+                <p>Saturday - Sunday 12 pm - 10:30 pm</p>
+                <br>
+                <h2>DELIVERY HOURS</h2>
+                <p>Monday - Friday 11:30 am - 10:15 pm</p>
+                <p>Saturday - Sunday 12 pm - 10:15 pm</p>
+                <br>
+                    <a href="https://www.toasttab.com/munch-thai/v2/online-order#!/" target="_blank">Order Online</a>
+            </div>
+        </div>
+        <div id="ourmenu" class="menucontainer">
+            <div class="menu">
+                <div class="menuheader">
+                    <div id="menutabs" class="dragscroll">
+                        <i id='indicator-left' class="material-icons" onclick="arrowLeft()">arrow_back_ios</i>
+                        <a class="tablinks menutab-wrap" onclick="openTab(event, 'menuveg')">Vegetarian &&nbsp;Vegan</a>
+                        <a class="tablinks" onclick="openTab(event, 'menuspecials')">Lunch Specials</a>
+                        <a class="tablinks active" id='defaultOpen' onclick="openTab(event, 'menumain')">Main Menu</a>
+                        <a class="tablinks" onclick="openTab(event, 'menugf')">Gluten&nbsp;Free</a>
+                        <a class="tablinks" onclick="openTab(event, 'menudrinks')">Drinks</a>
+                        <a class="tablinks" onclick="openTab(event, 'menuparty')">Party Size Trays</a>
+                        <i id="indicator-right" class="material-icons" onclick="arrowRight()">arrow_forward_ios</i>
+                    </div>
+                </div>
+
+                <!-- Tab content -->
+
+                <div id="menuveg" class="tabcontent"></div>
+
+                <div id="menuspecials" class="tabcontent"></div>
+
+                <div id="menumain" class="tabcontent"></div>
+
+                <div id="menugf" class="tabcontent"></div>
+
+                <div id="menudrinks" class="tabcontent"></div>
+
+                <div id="menuparty" class="tabcontent"></div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div id="iframeplaceholder">
+            <iframe frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCVMQ5inaGQopxivY0ZtQsYDCBNz_bn4GA&q=Munch+Thai,Anaheim+CA" allowfullscreen></iframe>
+        </div>
+        <div id="contact">
+            <div>
+                <h2>Location</h2>
+                <p>18541-A Beach Blvd</p>
+                <p>Huntington Beach, CA 92684</p>
+                <br>
+                <p>Phone: (714) 369-6100</p>
+
+            </div>
+            <div>
+                <h2>TAKEOUT & DINE-IN HOURS</h2>
+                <p>Monday - Friday 11:30 am - 10:30 pm</p>
+                <p>Saturday - Sunday 12 pm - 10:30 pm</p>
+                <br>
+                <h2>DELIVERY HOURS</h2>
+                <p>Monday - Friday 11:30 am - 10:15 pm</p>
+                <p>Saturday - Sunday 12 pm - 10:15 pm</p>
+
+            </div>
+        </div>
+        <div class="sociallinks">
+            <a aria-label="Find on Instagram" href="https://www.facebook.com/munchthaifood/" rel="noopener" target="_blank"><img class="invert" src="./assets/images/instagram.png" alt="instagram logo"></a>
+            <a aria-label="Like on Facebook" href="https://www.instagram.com/munchthaifood/" rel="noopener" target="_blank"> <img src="./assets/images/facebook.png" alt="facebook logo"></a>
+        </div>
+        <div class="location">
+            <h6>Our Restaurants</h6>
+            <div class="restaurants">
+                <div>
+                    <p>Munch Bistro - Thai With A Twist</p>
+                    <p>18541-A Beach Blvd</p>
+                    <p>Huntington Beach, CA 92684</p>
+                    <p>(714) 369-6100</p>
+                    <a href="https://www.munchbistro.com/">
+                        <p>www.munchbistro.com</p>
+                    </a>
+                </div>
+                <div>
+                    <p>Munch - Thai Food & Sweet Tea</p>
+                    <p>880 W Lincoln Ave</p>
+                    <p>Anaheim, CA 92805</p>
+                    <p>(714) 956-2830</p>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./assets/js/dragscroll.js"></script>
+    <script src="./assets/js/nav.js"></script>
+    <script src="./assets/js/index.js"></script>
+</body>
+
+</html>
