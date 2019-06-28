@@ -58,38 +58,53 @@
                 <p>Monday - Friday 11:30 am - 10:15 pm</p>
                 <p>Saturday - Sunday 12 pm - 10:15 pm</p>
                 <br>
-                    <a href="https://www.toasttab.com/munch-thai/v2/online-order#!/" target="_blank">Order Online</a>
+                <a href="https://www.toasttab.com/munch-thai/v2/online-order#!/" target="_blank">Order Online</a>
             </div>
         </div>
-        <div id="ourmenu" class="menucontainer">
-            <div class="menu">
-                <div class="menuheader">
-                    <div id="menutabs" class="dragscroll">
-                        <i id='indicator-left' class="material-icons" onclick="arrowLeft()">arrow_back_ios</i>
-                        <a class="tablinks menutab-wrap" onclick="openTab(event, 'menuveg')">Vegetarian &&nbsp;Vegan</a>
-                        <a class="tablinks" onclick="openTab(event, 'menuspecials')">Lunch Specials</a>
-                        <a class="tablinks active" id='defaultOpen' onclick="openTab(event, 'menumain')">Main Menu</a>
-                        <a class="tablinks" onclick="openTab(event, 'menugf')">Gluten&nbsp;Free</a>
-                        <a class="tablinks" onclick="openTab(event, 'menudrinks')">Drinks</a>
-                        <a class="tablinks" onclick="openTab(event, 'menuparty')">Party Size Trays</a>
-                        <i id="indicator-right" class="material-icons" onclick="arrowRight()">arrow_forward_ios</i>
-                    </div>
+        <div class="menucontainer">
+            <div class="announcement">
+                <img src="./assets/images/soda.jpg" alt="soda can coca-cola">
+                <div>
+                    <h3>$1 SODA</h3>
+                    With any lunch special.<br>
+                    Dine in and Take out.<br>
+                    Limit 2 cans per one Lunch Special.<br>
+                    <br>
+                    Mon - Fri: 11:30 AM - 3 PM (except holidays)
                 </div>
-
-                <!-- Tab content -->
-
-                <div id="menuveg" class="tabcontent"></div>
-
-                <div id="menuspecials" class="tabcontent"></div>
-
-                <div id="menumain" class="tabcontent"></div>
-
-                <div id="menugf" class="tabcontent"></div>
-
-                <div id="menudrinks" class="tabcontent"></div>
-
-                <div id="menuparty" class="tabcontent"></div>
             </div>
+
+            <div id="ourmenu">
+                <div class="menu">
+                    <div class="menuheader">
+                        <div id="menutabs" class="dragscroll">
+                            <i id='indicator-left' class="material-icons" onclick="arrowLeft()">arrow_back_ios</i>
+                            <a class="tablinks menutab-wrap" onclick="openTab(event, 'menuveg')">Vegetarian &&nbsp;Vegan</a>
+                            <a class="tablinks" onclick="openTab(event, 'menuspecials')">Lunch Specials</a>
+                            <a class="tablinks active" id='defaultOpen' onclick="openTab(event, 'menumain')">Main Menu</a>
+                            <a class="tablinks" onclick="openTab(event, 'menugf')">Gluten&nbsp;Free</a>
+                            <a class="tablinks" onclick="openTab(event, 'menudrinks')">Drinks</a>
+                            <a class="tablinks" onclick="openTab(event, 'menuparty')">Party Size Trays</a>
+                            <i id="indicator-right" class="material-icons" onclick="arrowRight()">arrow_forward_ios</i>
+                        </div>
+                    </div>
+
+                    <!-- Tab content -->
+
+                    <div id="menuveg" class="tabcontent"></div>
+
+                    <div id="menuspecials" class="tabcontent"></div>
+
+                    <div id="menumain" class="tabcontent"></div>
+
+                    <div id="menugf" class="tabcontent"></div>
+
+                    <div id="menudrinks" class="tabcontent"></div>
+
+                    <div id="menuparty" class="tabcontent"></div>
+                </div>
+            </div>
+        </div>
         </div>
     </main>
     <footer>
@@ -113,34 +128,13 @@
                 <h2>DELIVERY HOURS</h2>
                 <p>Monday - Friday 11:30 am - 10:15 pm</p>
                 <p>Saturday - Sunday 12 pm - 10:15 pm</p>
-
             </div>
         </div>
         <div class="sociallinks">
             <a aria-label="Find on Instagram" href="https://www.facebook.com/munchthaifood/" rel="noopener" target="_blank"><img class="invert" src="./assets/images/instagram.png" alt="instagram logo"></a>
             <a aria-label="Like on Facebook" href="https://www.instagram.com/munchthaifood/" rel="noopener" target="_blank"> <img src="./assets/images/facebook.png" alt="facebook logo"></a>
         </div>
-        <div class="location">
-            <h6>Our Restaurants</h6>
-            <div class="restaurants">
-                <div>
-                    <p>Munch Bistro - Thai With A Twist</p>
-                    <p>18541-A Beach Blvd</p>
-                    <p>Huntington Beach, CA 92684</p>
-                    <p>(714) 369-6100</p>
-                    <a href="https://www.munchbistro.com/">
-                        <p>www.munchbistro.com</p>
-                    </a>
-                </div>
-                <div>
-                    <p>Munch - Thai Food & Sweet Tea</p>
-                    <p>880 W Lincoln Ave</p>
-                    <p>Anaheim, CA 92805</p>
-                    <p>(714) 956-2830</p>
 
-                </div>
-            </div>
-        </div>
     </footer>
     <script src="./assets/js/dragscroll.js"></script>
     <script src="./assets/js/nav.js"></script>
