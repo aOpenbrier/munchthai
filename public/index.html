@@ -61,7 +61,7 @@
                 <a href="https://www.toasttab.com/munch-thai/v2/online-order#!/" target="_blank">Order Online</a>
             </div>
         </div>
-        <div id="ourmenu" class="menucontainer">
+        <div class="menucontainer">
             <div class="announcement">
                 <img src="./assets/images/soda.jpg" alt="soda can coca-cola">
                 <div>
@@ -73,34 +73,38 @@
                     Mon - Fri: 11:30 AM - 3 PM (except holidays)
                 </div>
             </div>
-            <div class="menu">
-                <div class="menuheader">
-                    <div id="menutabs" class="dragscroll">
-                        <i id='indicator-left' class="material-icons" onclick="arrowLeft()">arrow_back_ios</i>
-                        <a class="tablinks menutab-wrap" onclick="openTab(event, 'menuveg')">Vegetarian &&nbsp;Vegan</a>
-                        <a class="tablinks" onclick="openTab(event, 'menuspecials')">Lunch Specials</a>
-                        <a class="tablinks active" id='defaultOpen' onclick="openTab(event, 'menumain')">Main Menu</a>
-                        <a class="tablinks" onclick="openTab(event, 'menugf')">Gluten&nbsp;Free</a>
-                        <a class="tablinks" onclick="openTab(event, 'menudrinks')">Drinks</a>
-                        <a class="tablinks" onclick="openTab(event, 'menuparty')">Party Size Trays</a>
-                        <i id="indicator-right" class="material-icons" onclick="arrowRight()">arrow_forward_ios</i>
+
+            <div id="ourmenu">
+                <div class="menu">
+                    <div class="menuheader">
+                        <div id="menutabs" class="dragscroll">
+                            <i id='indicator-left' class="material-icons" onclick="arrowLeft()">arrow_back_ios</i>
+                            <a class="tablinks menutab-wrap" onclick="openTab(event, 'menuveg')">Vegetarian &&nbsp;Vegan</a>
+                            <a class="tablinks" onclick="openTab(event, 'menuspecials')">Lunch Specials</a>
+                            <a class="tablinks active" id='defaultOpen' onclick="openTab(event, 'menumain')">Main Menu</a>
+                            <a class="tablinks" onclick="openTab(event, 'menugf')">Gluten&nbsp;Free</a>
+                            <a class="tablinks" onclick="openTab(event, 'menudrinks')">Drinks</a>
+                            <a class="tablinks" onclick="openTab(event, 'menuparty')">Party Size Trays</a>
+                            <i id="indicator-right" class="material-icons" onclick="arrowRight()">arrow_forward_ios</i>
+                        </div>
                     </div>
+
+                    <!-- Tab content -->
+
+                    <div id="menuveg" class="tabcontent"></div>
+
+                    <div id="menuspecials" class="tabcontent"></div>
+
+                    <div id="menumain" class="tabcontent"></div>
+
+                    <div id="menugf" class="tabcontent"></div>
+
+                    <div id="menudrinks" class="tabcontent"></div>
+
+                    <div id="menuparty" class="tabcontent"></div>
                 </div>
-
-                <!-- Tab content -->
-
-                <div id="menuveg" class="tabcontent"></div>
-
-                <div id="menuspecials" class="tabcontent"></div>
-
-                <div id="menumain" class="tabcontent"></div>
-
-                <div id="menugf" class="tabcontent"></div>
-
-                <div id="menudrinks" class="tabcontent"></div>
-
-                <div id="menuparty" class="tabcontent"></div>
             </div>
+        </div>
         </div>
     </main>
     <footer>
