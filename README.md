@@ -1,10 +1,11 @@
 ![Munch Thai Logo](./public/assets/images/logo.png)
 # Munch Thai Food & Sweet Tea
 
-**Restaurant website build tools**
+**Restaurant website & build tools**
 
 ## Deployment
-Development Build: [GitHub Pages](https://aopenbrier.github.io/munchthai)
+Deployed: [Munchthai.com](https://www.munchthai.com)
+Development Build: [GitHub Pages](https://aopenbrier.github.io/munchthai)  
 
 ## Development setup
 Project uses Nodejs to execute JavaScript at command line interface.  
@@ -28,6 +29,6 @@ From within the `src` folder you can run the following gulp commands:
 - [Sass](https://sass-lang.com/) - Syntactically Awesome Style Sheets. CSS pre-processor  
 
 ## Author
-Adam Openbrier
- &bull; [Portfolio](https://aopenbrier.github.io/portfolio.html)  
- &bull; [GitHub](https://github.com/aOpenbrier) 
+Adam Openbrier  
+ &bull; [Website](https://www.adamopenbrier.com/)  
+ &bull; [GitHub](https://github.com/aOpenbrier)
