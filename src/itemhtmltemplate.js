@@ -8,7 +8,7 @@ menu.forEach(tab => {
         if (section["section items"]) {
             section["section items"].forEach((item, itemIndex) => {
                 if (item.image) {
-                    const filename = `../public/menu/${item.image.split('.')[0]}.html`
+                    const filename = `${item.image.split('.')[0]}.html`
                     const data = `
 <!DOCTYPE html>
 <html lang="en">
@@ -62,7 +62,7 @@ menu.forEach(tab => {
             ${item.options ? `<p class="itemoptions">${item.options}</p>` : ''}
             <div class="itemimagewrapper">
                 <div class="itemimage" style="background-image:url(../assets/images/${item.image})">
-                        <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fwww.munchthai.com%2Fmenu%2F${filename}.html&layout=button&size=small&width=59&height=20&appId" width="59" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                        <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fwww.munchthai.com%2Fmenu%2F${filename}&layout=button&size=small&width=59&height=20&appId" width="59" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
                 <div>
             <div>
         </div>
@@ -71,8 +71,8 @@ menu.forEach(tab => {
 </main>
 <footer>
     <div class="sociallinks">
-        <a aria-label="Find on Instagram" href="https://www.facebook.com/munchthaifood/" rel="noopener" target="_blank"><img class="invert" src="./assets/images/instagram.png" alt="instagram logo"></a>
-        <a aria-label="Like on Facebook" href="https://www.instagram.com/munchthaifood/" rel="noopener" target="_blank"> <img src="./assets/images/facebook.png" alt="facebook logo"></a>
+        <a aria-label="Find on Instagram" href="https://www.facebook.com/munchthaifood/" rel="noopener" target="_blank"><img class="invert" src="../assets/images/instagram.png" alt="instagram logo"></a>
+        <a aria-label="Like on Facebook" href="https://www.instagram.com/munchthaifood/" rel="noopener" target="_blank"> <img src="../assets/images/facebook.png" alt="facebook logo"></a>
     </div>
     <div class="location">
         <div>
@@ -88,8 +88,7 @@ menu.forEach(tab => {
 </body>
 </html>
 `
-
-                    fs.writeFile(filename, data, (e) => e && console.error(e))
+                    fs.writeFileSync(`../public/menu/${filename}`, data, (e) => e && console.error(e))
 
                 }
             })
