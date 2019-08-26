@@ -77,14 +77,14 @@
             <div id="ourmenu">
                 <div class="menu">
                     <div class="menuheader">
-                        <div id="menutabs" class="dragscroll">
+                        <div role="tablist" id="menutabs" class="dragscroll">
                             <i role="presentation" id="indicator-left" class="material-icons" onclick="arrowLeft()">arrow_back_ios</i>
-                            <a role="tab" tabindex="0" class="tablinks menutab-wrap" onclick="openTab(event, 'menuveg')">Vegetarian &&nbsp;Vegan</a>
-                            <a role="tab" tabindex="0" class="tablinks" onclick="openTab(event, 'menuspecials')">Lunch Specials</a>
-                            <a role="tab" tabindex="0" class="tablinks active" id='defaultOpen' onclick="openTab(event, 'menumain')">Main Menu</a>
-                            <a role="tab" tabindex="0" class="tablinks" onclick="openTab(event, 'menugf')">Gluten&nbsp;Free</a>
-                            <a role="tab" tabindex="0" class="tablinks" onclick="openTab(event, 'menudrinks')">Drinks</a>
-                            <a role="tab" tabindex="0" class="tablinks menutab-wrap" onclick="openTab(event, 'menuparty')">Party&nbsp;Size Trays</a>
+                            <a role="tab" aria-controls="menuveg" aria-selected="false" tabindex="0" class="tablinks menutab-wrap" onkeyup="keyTab(event, 'menuveg')" onclick="openTab(event, 'menuveg')">Vegetarian &&nbsp;Vegan</a>
+                            <a role="tab" aria-controls="menuspecials" aria-selected="false" tabindex="0" class="tablinks" onkeyup="keyTab(event, 'menuspecials')" onclick="openTab(event, 'menuspecials')">Lunch Specials</a>
+                            <a role="tab" aria-controls="menumain" aria-selected="false" tabindex="0" class="tablinks active" id='defaultOpen' onkeyup="keyTab(event, 'menumain')" onclick="openTab(event, 'menumain')">Main Menu</a>
+                            <a role="tab" aria-controls="menugf" aria-selected="false" tabindex="0" class="tablinks" onkeyup="keyTab(event, 'menugf')" onclick="openTab(event, 'menugf')">Gluten&nbsp;Free</a>
+                            <a role="tab" aria-controls="menudrinks" aria-selected="false" tabindex="0" class="tablinks" onkeyup="keyTab(event, 'menudrinks')" onclick="openTab(event, 'menudrinks')">Drinks</a>
+                            <a role="tab" aria-controls="menuparty" aria-selected="false" tabindex="0" class="tablinks menutab-wrap" onkeyup="keyTab(event, 'menuparty')" onclick="openTab(event, 'menuparty')">Party&nbsp;Size Trays</a>
                             <i role="presentation" id="indicator-right" class="material-icons" onclick="arrowRight()">arrow_forward_ios</i>
                         </div>
                     </div>
