@@ -116,7 +116,7 @@ ${item.options ? `<p class="itemoptions">${item.options}</p>` : ''}
 <div class="itemimgwrapper">
     ${item.image ? `
     <div class="itemimage" style="background-image:url(./assets/images/${item.image})">
-        <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fwww.munchthai.com%2Fmenu%2F${item.image.split('.')[0]}.html&layout=button&size=small&width=59&height=20&appId" width="59" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+        <iframe title="facebook sharing for ${item.name}" src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fwww.munchthai.com%2Fmenu%2F${item.image.split('.')[0]}.html&layout=button&size=small&width=59&height=20&appId" width="59" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
     </div>` : ''}
     ${item.featured ? `<p class="itemfeatured">FEATURED</p>` : ''}
 </div>
