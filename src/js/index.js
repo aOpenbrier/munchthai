@@ -1,3 +1,9 @@
+function keyTab(evt, tabpanel){
+    if (event.key === 'Enter')
+    openTab(evt, tabpanel)
+
+}
+
 function openTab(evt, tabId) {
     // Get all elements with class="tabcontent" and hide them
     let tabcontent = document.getElementsByClassName('tabcontent')
@@ -7,11 +13,13 @@ function openTab(evt, tabId) {
     // Get all elements with class="tablinks" and remove the class "active"
     let tablinks = document.getElementsByClassName('tablinks')
     for (let i = 0; i < tablinks.length; i++) {
+        tablinks[i].setAttribute('aria-selected', false)
         tablinks[i].className = tablinks[i].className.replace(' active', '')
     }
     // Show the current tab, and add an "active" class to the button that opened the tab 
     document.getElementById(tabId).style.display = 'block'
     evt.currentTarget.className += ' active'
+    evt.currentTarget.setAttribute('aria-selected', true)
     document.getElementById('menutabs').style.scrollBehavior = 'smooth'
     // center active tab
     const ElemPosition = evt.currentTarget.offsetLeft - 20
