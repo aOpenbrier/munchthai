@@ -27,25 +27,25 @@
 </head>
 
 <body>
-
     <header>
+        <a class="sr-only sr-only-focusable" href="#top">skip navigation</a>
         <nav>
-            <ul id='nav-collapse'>
-                <li class='order'>
-                    <a href="https://www.toasttab.com/munch-thai/v2/online-order#!/" target="_blank">Order<span class='hidemobile'> Online</span></a>
+            <ul id='nav-collapse' role="menu">
+                <li role="presentation" class='order'>
+                    <a role="menuitem" href="https://www.toasttab.com/munch-thai/v2/online-order#!/" target="_blank">Order<span class='hidemobile'> Online</span></a>
                 </li>
-                <li><a href="#top">Home</a></li>
-                <li><a href="#ourmenu">Our Menu</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-                <li class="hamburger">
-                    <i id='navtrigger' class="material-icons" onclick="openMenu()">
+                <li role="presentation"><a role="menuitem" href="#top">Home</a></li>
+                <li role="presentation"><a role="menuitem" href="#ourmenu">Our Menu</a></li>
+                <li role="presentation"><a role="menuitem" href="#contact">Contact Us</a></li>
+                <li role="presentation" class="hamburger">
+                    <i id='navtrigger'role="presentation" class="material-icons" onclick="openMenu()">
                         menu
                     </i>
                 </li>
             </ul>
         </nav>
-        <div id="top"></div>
-        <img src="./assets/images/header.jpg" alt="Munch Thai Food & Sweet Tea">
+        <h1 id="top" class="sr-only">Munch Thai Food & Sweet Tea</h1>
+        <img src="./assets/images/header.jpg" alt="Munch Thai Logo with Thai food dishes & sweet iced tea">
     </header>
     <main>
         <div class="hours">
@@ -78,14 +78,14 @@
                 <div class="menu">
                     <div class="menuheader">
                         <div id="menutabs" class="dragscroll">
-                            <i id='indicator-left' class="material-icons" onclick="arrowLeft()">arrow_back_ios</i>
-                            <a class="tablinks menutab-wrap" onclick="openTab(event, 'menuveg')">Vegetarian &&nbsp;Vegan</a>
-                            <a class="tablinks" onclick="openTab(event, 'menuspecials')">Lunch Specials</a>
-                            <a class="tablinks active" id='defaultOpen' onclick="openTab(event, 'menumain')">Main Menu</a>
-                            <a class="tablinks" onclick="openTab(event, 'menugf')">Gluten&nbsp;Free</a>
-                            <a class="tablinks" onclick="openTab(event, 'menudrinks')">Drinks</a>
-                            <a class="tablinks" onclick="openTab(event, 'menuparty')">Party Size Trays</a>
-                            <i id="indicator-right" class="material-icons" onclick="arrowRight()">arrow_forward_ios</i>
+                            <i role="presentation" id="indicator-left" class="material-icons" onclick="arrowLeft()">arrow_back_ios</i>
+                            <a role="tab" tabindex="0" class="tablinks menutab-wrap" onclick="openTab(event, 'menuveg')">Vegetarian &&nbsp;Vegan</a>
+                            <a role="tab" tabindex="0" class="tablinks" onclick="openTab(event, 'menuspecials')">Lunch Specials</a>
+                            <a role="tab" tabindex="0" class="tablinks active" id='defaultOpen' onclick="openTab(event, 'menumain')">Main Menu</a>
+                            <a role="tab" tabindex="0" class="tablinks" onclick="openTab(event, 'menugf')">Gluten&nbsp;Free</a>
+                            <a role="tab" tabindex="0" class="tablinks" onclick="openTab(event, 'menudrinks')">Drinks</a>
+                            <a role="tab" tabindex="0" class="tablinks menutab-wrap" onclick="openTab(event, 'menuparty')">Party&nbsp;Size Trays</a>
+                            <i role="presentation" id="indicator-right" class="material-icons" onclick="arrowRight()">arrow_forward_ios</i>
                         </div>
                     </div>
 
@@ -133,6 +133,21 @@
         <div class="sociallinks">
             <a aria-label="Find on Instagram" href="https://www.facebook.com/munchthaifood/" rel="noopener" target="_blank"><img class="invert" src="./assets/images/instagram.png" alt="instagram logo"></a>
             <a aria-label="Like on Facebook" href="https://www.instagram.com/munchthaifood/" rel="noopener" target="_blank"> <img src="./assets/images/facebook.png" alt="facebook logo"></a>
+        </div>
+        <div class="accessibility">
+            <script type="text/javascript">
+            function searchGoogle(e){
+            e.q.value="site:munchthai.com "+e.qfront.value
+            }
+            </script>
+
+            <a href="./sitemap.html">Sitemap</a>
+            <form role="search" action="http://www.google.com/search" method="get" onSubmit="searchGoogle(this)">
+                    <input name="q" type="hidden" >
+                    <label for="googlesearch">Search Munch Thai on Google</label>
+                    <input id="googlesearch" name="qfront" type="text">
+                    <button type="submit">Search</button>
+            </form>
         </div>
 
     </footer>
