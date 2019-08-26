@@ -6,11 +6,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Munch Thai Food - Spicy Basil</title>
-    <meta name="description" content="Fried tofu sautéed with chili, onion, garlic, bell pepper and basil leaves.">
+    <meta name="description" content="Served with a side of rice and salad.">
     <meta property="og:title" content="Munch Thai Food Spicy Basil">
-    <meta property="og:description" content="Fried tofu sautéed with chili, onion, garlic, bell pepper and basil leaves.">
+    <meta property="og:description" content="Served with a side of rice and salad.">
     <meta property="og:image" content="https://www.munchthai.com/assets/images/SpicyBasil.jpg">
-    <meta property="og:url" content="https://www.munchthai.com/menu/../public/menu/SpicyBasil.html">
+    <meta property="og:url" content="https://www.munchthai.com/menu/SpicyBasil.html">
     <meta name="theme-color" content="#c4001b">
     <link rel="shortcut icon" href="../assets/images/favicon.png">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -20,16 +20,19 @@
 </head>
 <body>
 <header>
+<a class="sr-only sr-only-focusable" href="#top">skip navigation</a>
         <nav>
-            <ul id='nav-collapse'>
-                <li class='order'>
-                    <a href="https://www.toasttab.com/munch-thai/v2/online-order#!/" target="_blank">Order<span class='hidemobile'> Online</span></a>
+            <ul id='nav-collapse' role="menu">
+                <li role="presentation" class='order'>
+                    <a role="menuitem" href="https://www.toasttab.com/munch-thai/v2/online-order#!/" target="_blank">Order<span class='hidemobile'> Online</span></a>
                 </li>
-                <li><a href="../index.html#top">Home</a></li>
-                <li><a href="../index.html#ourmenu">Our Menu</a></li>
-                <li><a href="../index.html#contact">Contact Us</a></li>
-                <li class="hamburger">
-                    <i id='navtrigger' class="material-icons" onclick="openMenu()">menu</i>
+                <li role="presentation"><a role="menuitem" href="https://www.munchthai.com">Home</a></li>
+                <li role="presentation"><a role="menuitem" href="https://www.munchthai.com#ourmenu">Our Menu</a></li>
+                <li role="presentation"><a role="menuitem" href="#location">Contact Us</a></li>
+                <li role="presentation" class="hamburger">
+                    <i role="presentation" id='navtrigger' class="material-icons" onclick="openMenu()">
+                        menu
+                    </i>
                 </li>
             </ul>
         </nav>
@@ -37,13 +40,13 @@
     <main>
     <div class="menucontainer">
                 <div>
-                <a class="backbutton" href="../index.html#ourmenu"><i class="material-icons">arrow_back_ios</i>Back to Menu</a>
+                <a class="backbutton" href="../index.html#ourmenu"><i class="material-icons" role="presentation">arrow_back_ios</i>Back to Menu</a>
                 </div>
-                <div class="menu">
+                <div id="top" class="menu">
                 <div class="itempage">
             <img class="itempagelogo" src="../assets/images/logo.png" alt="Munch Logo">
             <h5 class="itemname">Spicy Basil</h5>
-            <p class="itemdesc">Fried tofu sautéed with chili, onion, garlic, bell pepper and basil leaves.</p>
+            <p class="itemdesc">Served with a side of rice and salad.</p>
             
             
             
@@ -51,7 +54,7 @@
             
             <div class="itemimagewrapper">
                 <div class="itemimage" style="background-image:url(../assets/images/SpicyBasil.jpg)">
-                        <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fwww.munchthai.com%2Fmenu%2F../public/menu/SpicyBasil.html.html&layout=button&size=small&width=59&height=20&appId" width="59" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                        <iframe title="share Spicy Basil to facebook" src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fwww.munchthai.com%2Fmenu%2FSpicyBasil.html&layout=button&size=small&width=59&height=20&appId" width="59" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
                 <div>
             <div>
         </div>
@@ -60,10 +63,10 @@
 </main>
 <footer>
     <div class="sociallinks">
-        <a aria-label="Find on Instagram" href="https://www.facebook.com/munchthaifood/" rel="noopener" target="_blank"><img class="invert" src="./assets/images/instagram.png" alt="instagram logo"></a>
-        <a aria-label="Like on Facebook" href="https://www.instagram.com/munchthaifood/" rel="noopener" target="_blank"> <img src="./assets/images/facebook.png" alt="facebook logo"></a>
+        <a aria-label="Find on Instagram" href="https://www.facebook.com/munchthaifood/" rel="noopener" target="_blank"><img class="invert" src="../assets/images/instagram.png" alt="instagram logo"></a>
+        <a aria-label="Like on Facebook" href="https://www.instagram.com/munchthaifood/" rel="noopener" target="_blank"> <img src="../assets/images/facebook.png" alt="facebook logo"></a>
     </div>
-    <div class="location">
+    <div id='location' class="location">
         <div>
             <p>Location</p>
             <p>Munch - Thai Food & Sweet Tea</p>
@@ -75,6 +78,4 @@
 </footer>
 <script src="../assets/js/nav.js"></script>
 </body>
-</html>
-dy>
 </html>
