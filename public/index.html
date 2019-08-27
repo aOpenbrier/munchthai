@@ -49,7 +49,7 @@
     </header>
     <main>
         <div class="hours">
-            <div>
+            <div tabindex="0" aria-label="hours">
                 <h2>TAKEOUT & DINE-IN HOURS</h2>
                 <p>Monday - Friday 11:30 am - 10:30 pm</p>
                 <p>Saturday - Sunday 12 pm - 10:30 pm</p>
@@ -62,7 +62,7 @@
             </div>
         </div>
         <div class="menucontainer">
-            <div class="announcement">
+            <div class="announcement" tabindex="0" aria-label="soda offer">
                 <img src="./assets/images/soda.jpg" alt="soda can coca-cola">
                 <div>
                     <h3>$1 SODA</h3>
@@ -79,48 +79,45 @@
                     <div class="menuheader">
                         <div role="tablist" id="menutabs" class="dragscroll">
                             <i role="presentation" id="indicator-left" class="material-icons" onclick="arrowLeft()">arrow_back_ios</i>
-                            <a role="tab" aria-controls="menuveg" aria-selected="false" tabindex="0" class="tablinks menutab-wrap" onkeyup="keyTab(event, 'menuveg')" onclick="openTab(event, 'menuveg')">Vegetarian &&nbsp;Vegan</a>
-                            <a role="tab" aria-controls="menuspecials" aria-selected="false" tabindex="0" class="tablinks" onkeyup="keyTab(event, 'menuspecials')" onclick="openTab(event, 'menuspecials')">Lunch Specials</a>
-                            <a role="tab" aria-controls="menumain" aria-selected="false" tabindex="0" class="tablinks active" id='defaultOpen' onkeyup="keyTab(event, 'menumain')" onclick="openTab(event, 'menumain')">Main Menu</a>
-                            <a role="tab" aria-controls="menugf" aria-selected="false" tabindex="0" class="tablinks" onkeyup="keyTab(event, 'menugf')" onclick="openTab(event, 'menugf')">Gluten&nbsp;Free</a>
-                            <a role="tab" aria-controls="menudrinks" aria-selected="false" tabindex="0" class="tablinks" onkeyup="keyTab(event, 'menudrinks')" onclick="openTab(event, 'menudrinks')">Drinks</a>
-                            <a role="tab" aria-controls="menuparty" aria-selected="false" tabindex="0" class="tablinks menutab-wrap" onkeyup="keyTab(event, 'menuparty')" onclick="openTab(event, 'menuparty')">Party&nbsp;Size Trays</a>
+                            <a role="tab" id="tabveg" aria-controls="menuveg" aria-selected="false" tabindex="-1" class="tablinks menutab-wrap" onkeyup="keyTab(event, 'menuveg')" onclick="openTab(event, 'menuveg')">Vegetarian &&nbsp;Vegan</a>
+                            <a role="tab" id="tabspecials" aria-controls="menuspecials" aria-selected="false" tabindex="-1" class="tablinks" onkeyup="keyTab(event, 'menuspecials')" onclick="openTab(event, 'menuspecials')">Lunch Specials</a>
+                            <a role="tab" id="tabmain" aria-controls="menumain" aria-selected="false" tabindex="-1" class="tablinks active default-open" onkeyup="keyTab(event, 'menumain')" onclick="openTab(event, 'menumain')">Main Menu</a>
+                            <a role="tab" id="tabgf" aria-controls="menugf" aria-selected="false" tabindex="-1" class="tablinks" onkeyup="keyTab(event, 'menugf')" onclick="openTab(event, 'menugf')">Gluten&nbsp;Free</a>
+                            <a role="tab" id="tabdrinks" aria-controls="menudrinks" aria-selected="false" tabindex="-1" class="tablinks" onkeyup="keyTab(event, 'menudrinks')" onclick="openTab(event, 'menudrinks')">Drinks</a>
+                            <a role="tab" id="tabparty" aria-controls="menuparty" aria-selected="false" tabindex="-1" class="tablinks menutab-wrap" onkeyup="keyTab(event, 'menuparty')" onclick="openTab(event, 'menuparty')">Party&nbsp;Size Trays</a>
                             <i role="presentation" id="indicator-right" class="material-icons" onclick="arrowRight()">arrow_forward_ios</i>
                         </div>
                     </div>
 
                     <!-- Tab content -->
+                    <div id="menuveg" role="tabpanel" aria-labelledby="tabveg" tabindex="0" class="tabcontent"></div>
 
-                    <div id="menuveg" class="tabcontent"></div>
+                    <div id="menuspecials" role="tabpanel" aria-labelledby="tabspecials" tabindex="0" class="tabcontent"></div>
 
-                    <div id="menuspecials" class="tabcontent"></div>
+                    <div id="menumain" role="tabpanel" aria-labelledby="tabmain" tabindex="0" class="tabcontent"></div>
 
-                    <div id="menumain" class="tabcontent"></div>
+                    <div id="menugf" role="tabpanel" aria-labelledby="tabgf" tabindex="0" class="tabcontent"></div>
 
-                    <div id="menugf" class="tabcontent"></div>
+                    <div id="menudrinks" role="tabpanel" aria-labelledby="tabdrinks" tabindex="0" class="tabcontent"></div>
 
-                    <div id="menudrinks" class="tabcontent"></div>
-
-                    <div id="menuparty" class="tabcontent"></div>
+                    <div id="menuparty" role="tabpanel" aria-labelledby="tabparty" tabindex=" 0" class="tabcontent"></div>
                 </div>
             </div>
         </div>
         </div>
     </main>
     <footer>
-        <div id="iframeplaceholder">
-            <iframe frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCVMQ5inaGQopxivY0ZtQsYDCBNz_bn4GA&q=Munch+Thai,Anaheim+CA" allowfullscreen></iframe>
-        </div>
+            <iframe title="Google Maps location" frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCVMQ5inaGQopxivY0ZtQsYDCBNz_bn4GA&q=Munch+Thai,Anaheim+CA" allowfullscreen></iframe>
         <div id="contact">
-            <div>
-                <h2>Location</h2>
+            <div tabindex="0" aria-labelledby="locheader">
+                <h2 id='locheader'>Location</h2>
                 <p>880 W Lincoln Ave</p>
                 <p>Anaheim, CA 92805</p>
                 <br>
                 <p>Phone: (714) 956-2830</p>
 
             </div>
-            <div>
+            <div tabindex="0" aria-label="hours">
                 <h2>TAKEOUT & DINE-IN HOURS</h2>
                 <p>Monday - Friday 11:30 am - 10:30 pm</p>
                 <p>Saturday - Sunday 12 pm - 10:30 pm</p>
