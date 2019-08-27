@@ -1,7 +1,45 @@
-function keyTab(evt, tabpanel){
-    if (event.key === 'Enter')
-    openTab(evt, tabpanel)
+// store tab list for keyboard accessibility 
+let tabsArr = []
+let tablinks = document.getElementsByClassName('tablinks')
+    for (let i = 0; i < tablinks.length; i++) {
+        tabsArr.push(tablinks[i].id)
+    }
 
+function keyTab(evt, tabpanel) {
+    const current = tabsArr.indexOf(evt.currentTarget.id)
+    switch (evt.key) {
+        case 'Enter':
+            openTab(evt, tabpanel)
+            break
+        case "ArrowLeft":
+            if (current > 0) {
+                document.getElementById(tabsArr[current-1]).focus()
+                centerTab(document.getElementById(tabsArr[current-1]))
+            } else {tabsArr[tabsArr.length-1]
+                document.getElementById(tabsArr[tabsArr.length-1]).focus()
+                centerTab(document.getElementById(tabsArr[tabsArr.length-1]))
+            }
+
+            break
+        case 'ArrowRight':
+            if (current < tabsArr.length-1) {
+                document.getElementById(tabsArr[current+1]).focus()
+                centerTab(document.getElementById(tabsArr[current+1]))
+            } else {
+                document.getElementById(tabsArr[0]).focus()
+                centerTab(document.getElementById(tabsArr[0]))
+            }
+            break
+        default:
+        break
+    }
+}
+
+function centerTab(tab){
+
+    const ElemPosition = tab.offsetLeft - 20
+    const targetPosition = (tab.parentElement.clientWidth - tab.clientWidth) / 2
+    tab.parentElement.scrollLeft = ElemPosition - targetPosition
 }
 
 function openTab(evt, tabId) {
@@ -14,17 +52,17 @@ function openTab(evt, tabId) {
     let tablinks = document.getElementsByClassName('tablinks')
     for (let i = 0; i < tablinks.length; i++) {
         tablinks[i].setAttribute('aria-selected', false)
+        tablinks[i].setAttribute('tabindex', -1)
         tablinks[i].className = tablinks[i].className.replace(' active', '')
     }
     // Show the current tab, and add an "active" class to the button that opened the tab 
     document.getElementById(tabId).style.display = 'block'
     evt.currentTarget.className += ' active'
     evt.currentTarget.setAttribute('aria-selected', true)
+    evt.currentTarget.setAttribute('tabindex', 0)
     document.getElementById('menutabs').style.scrollBehavior = 'smooth'
     // center active tab
-    const ElemPosition = evt.currentTarget.offsetLeft - 20
-    const targetPosition = (evt.currentTarget.parentElement.clientWidth - evt.currentTarget.clientWidth) / 2
-    evt.currentTarget.parentElement.scrollLeft = ElemPosition - targetPosition
+    centerTab(evt.currentTarget)
     // scroll to top of menu section
     const menuTop = document.getElementById('ourmenu').offsetTop
     if (document.documentElement.scrollTop > menuTop || document.body.scrollTop > menuTop) {
@@ -101,6 +139,8 @@ fetch('./assets/js/menu.json')
             tab.sections.forEach((section, sectionIndex) => {
                 let sectionDiv = document.createElement('div')
                 sectionDiv.className = 'menusection'
+                sectionDiv.setAttribute('aria-label', section["section title"])
+                sectionDiv.setAttribute('tabindex', 0)
                 sectionDiv.innerHTML = `
         <h3 class="sectiontitle">${section["section title"]}</h3>
         ${section["section details"] ? `<p class="sectiondetails">${section["section details"]}</p>` : ''}
@@ -159,5 +199,5 @@ document.getElementById('menutabs').addEventListener('touchstart', menuScrolled)
 document.getElementById('menutabs').addEventListener('mousedown', menuScrolled)
 
 // initialize page
-document.getElementById('defaultOpen').click()
+document.getElementsByClassName('default-open')[0].click()
 updateArrows()
